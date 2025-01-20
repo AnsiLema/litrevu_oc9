@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
         <title>LITRevu</title>
+        <link rel="stylesheet" href="{% static 'reviews/styles.css' %}" />
     </head>
     <body>
+    <nav>
+        <a href="{% url 'user-list' %}">Utilisateurs</a>
+    </nav>
 
         {% block content %} {% endblock %}
-
     </body>
 </html>

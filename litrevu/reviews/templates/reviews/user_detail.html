@@ -1,0 +1,18 @@
+{% extends "reviews/base.html" %}
+
+{% block content %}
+
+<h2>{{ user.username }}</h2>
+
+<ul>
+    <li>
+        {{ user.email }}
+    </li>
+    <li>
+        {{ user.password }}
+    </li>
+</ul>
+
+<a href="{% url 'user-list' %}">retour</a>
+
+{% endblock %}

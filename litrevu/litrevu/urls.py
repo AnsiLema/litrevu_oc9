@@ -20,8 +20,9 @@ from reviews import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("hello/", views.hello),
+    path("user_list/", views.user_list, name="user-list"),
     path("about-us/", views.about),
     path("reviews/", views.reviews),
     path("contact/", views.contact),
+    path("user_list/<int:user_id>/", views.user_detail, name="user-detail"),
 ]

@@ -1,0 +1,15 @@
+{% extends "reviews/base.html" %}
+
+{% block content %}
+
+<h1>Utilisateurs !</h1>
+
+<ul>
+    {% for user in user_list %}
+        <li>
+            <a href="{% url 'user-detail' user.id %}">{{ user.username }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

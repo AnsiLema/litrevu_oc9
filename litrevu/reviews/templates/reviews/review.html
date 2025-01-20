@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Critique</title>
-</head>
-<body>
+{% extends 'reviews/base.html' %}
+
+{% block content %}
     <h1>Mes critiques de Livres</h1>
-    <p>
         {% for review in reviews %}
+    <ul>
+        <li>
         {{ review.name }},
-    </p>
+        </li>
+    </ul>
     {% endfor %}
 
-</body>
-</html>
+{% endblock %}
